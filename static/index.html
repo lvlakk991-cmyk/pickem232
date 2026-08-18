@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>S2 Pick'em</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<div id="app">
+
+  <header class="topbar">
+    <div class="logo">
+      <span class="logo-badge">S2</span>
+      <span class="logo-word">PICK<span class="apostrophe">'</span>EM</span>
+    </div>
+    <div class="points-pill" id="pointsPill">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
+      <span id="pointsValue">0</span> PTS
+    </div>
+  </header>
+
+  <main id="content" class="content">
+    <!-- panels injected by app.js -->
+  </main>
+
+  <nav class="bottomnav">
+    <button class="navbtn active" data-tab="pickem">
+      <span class="navicon">🎯</span><span>PICK'EM</span>
+    </button>
+    <button class="navbtn" data-tab="daily">
+      <span class="navicon">⚡</span><span>ЕЖЕДНЕВКА</span>
+    </button>
+    <button class="navbtn" data-tab="top">
+      <span class="navicon">🏆</span><span>ТОП</span>
+    </button>
+    <button class="navbtn" data-tab="stats">
+      <span class="navicon">📊</span><span>СТАТЫ</span>
+    </button>
+    <button class="navbtn" data-tab="admin" id="adminNavBtn" style="display:none;">
+      <span class="navicon">🛠</span><span>АДМИН</span>
+    </button>
+  </nav>
+
+  <div id="toast" class="toast"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
